@@ -1,5 +1,5 @@
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
-const FETCH_URL = "https://script.google.com/macros/s/AKfycbzHr-yu4UglEMidmEKvl32TidFzMeKXYkQ-sgqIEUmhWB44OKGkaVdKHquztcDP1xfR/exec";
+const FETCH_URL = "https://script.google.com/macros/s/AKfycbx-lwUylA-qBmjvGgeQJC020x8yA_F5HFvs634R_j24ePzLejtzAmCmhBZRd7LeAI0/exec";
 // CSSクラス追加
 function addClass(obj, cls) {
     if (!obj.classList.contains(cls)) {
