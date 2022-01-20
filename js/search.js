@@ -102,7 +102,6 @@ async function HandleWordSearch () {
             <h4 class="text-lg font-black my-1 mr-4 text-gray-500">大カテゴリー：${ datas[i].category1 }</h4>
             <h4 class="text-lg font-black my-1 mr-4 text-gray-500">小カテゴリー：${ datas[i].category2.filter(c => c != "") }</h4>
         </div>
-        <p class="text-gray-400 mb-1">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
         <ul class="flex mb-2">
         ${ keywords }
         </ul>
@@ -216,7 +215,6 @@ async function HandleCategorySearch(type, ctgry) {
                 <h4 class="text-lg font-black my-1 mr-4 text-gray-500">大カテゴリー：${ datas[i].category1 }</h4>
                 <h4 class="text-lg font-black my-1 mr-4 text-gray-500">小カテゴリー：${ datas[i].category2.filter(c => c != "") }</h4>
             </div>
-            <p class="text-gray-400 mb-1">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
             <ul class="flex mb-2">
             ${ keywords }
             </ul>
