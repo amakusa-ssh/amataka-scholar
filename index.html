@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- style tailwind css -->
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- style tailwind css ver.3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/amataka-scholoar/favicon.ico">
 
@@ -126,14 +126,14 @@
         </header>
         <main class="w-full grid grid-cols-3" style="height: calc(100vh - 5rem);">
             <!-- side bar container -->
-            <div class="py-4 overflow-hidden">
-                <div class="border-r border-purple-300 h-full p-4 pb-0">
+            <div class="py-1 overflow-hidden">
+                <div class="border-r border-purple-300 h-full overflow-y-scroll p-4 pb-0">
                     <h2 class="text-2xl font-bold border-b-2 border-purple-300">検索</h2>
                     <div class="mt-4 mb-16 grid grid-cols-4 lg:grid-cols-5 shadow-md">
                         <input 
                             id="search-word"
                             type="search"
-                            placeholder="スクミリンゴガイ"
+                            placeholder="例:スクミリンゴガイ"
                             class="col-span-3 lg:col-span-4 rounded-l-md focus:outline-none focus:ring focus:border-purple-300 w-full h-10 px-2"
                         >
                         <button 
@@ -144,7 +144,7 @@
                     </div>
 
                     <h2 class="text-2xl font-bold border-b-2 border-purple-300">カテゴリー</h2>
-                    <div class="mt-4 overflow-y-scroll" style="height: calc(70%);">
+                    <div class="mt-4">
                         <div class="h-full">
                             <ul class="">
                                 <li>
