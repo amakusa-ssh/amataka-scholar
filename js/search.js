@@ -107,7 +107,7 @@ async function HandleWordSearch () {
         ${ keywords }
         </ul>
         <div class="flex justify-end">
-            <a href="javascript:openPdf('abc')" class="w-32 text-center bg-yellow-400 hover:bg-yellow-300 text-black p-2 rounded-md shadow-md">開く</a>
+            <a href="javascript:openPdf('${ datas[i].pdfUrl }')" class="w-32 text-center bg-yellow-400 hover:bg-yellow-300 text-black p-2 rounded-md shadow-md">開く</a>
         </div>
     </div>
 </li>
@@ -221,7 +221,7 @@ async function HandleCategorySearch(type, ctgry) {
             ${ keywords }
             </ul>
             <div class="flex justify-end">
-                <a href="javascript:openPdf('abc')" class="w-32 text-center bg-yellow-400 hover:bg-yellow-300 text-black p-2 rounded-md shadow-md">開く</a>
+                <a href="javascript:openPdf('${ datas[i].pdfUrl }')" class="w-32 text-center bg-yellow-400 hover:bg-yellow-300 text-black p-2 rounded-md shadow-md">開く</a>
             </div>
         </div>
     </li>
