@@ -91,7 +91,7 @@ async function HandleWordSearch () {
             let keywords = "";
 
             for (let j = 0; j < datas[i].keyword.length; j++) {
-                keywords = keywords + `<li class="bg-purple-600 text-white m-1 p-2 py-1 rounded-full">${ datas[i].keyword[j] }</li>`;
+                keywords = keywords + `<li class="m-1"><button onclick="HandleTagSearch('${ datas[i].keyword[j] }')" class="bg-purple-600 text-white p-2 py-1 rounded-full">${ datas[i].keyword[j] }</button></li>`;
             };
 
             li.innerHTML = `
@@ -132,6 +132,12 @@ async function HandleWordSearch () {
         removeClass(btns[i], "opacity-50");
         btns[i].disabled = false;
     }
+}
+
+async function HandleTagSearch(tag) {
+    const s = document.getElementById("search-word");
+    s.value = tag;
+    await HandleWordSearch();
 }
 
 async function HandleCategorySearch(type, ctgry) {
@@ -205,7 +211,7 @@ async function HandleCategorySearch(type, ctgry) {
                 let keywords = "";
     
                 for (let j = 0; j < datas[i].keyword.length; j++) {
-                    keywords = keywords + `<li class="bg-purple-600 text-white m-1 p-2 py-1 rounded-full">${ datas[i].keyword[j] }</li>`;
+                    keywords = keywords + `<li class="m-1"><button onclick="HandleTagSearch('${ datas[i].keyword[j] }')" class="bg-purple-600 text-white p-2 py-1 rounded-full">${ datas[i].keyword[j] }</button></li>`;
                 };
     
                 li.innerHTML = `
