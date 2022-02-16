@@ -102,12 +102,12 @@ async function HandleWordSearch () {
             <h4 class="text-lg font-black my-1 mr-4 text-gray-500">大カテゴリー：${ datas[i].category1 }</h4>
             <h4 class="text-lg font-black my-1 mr-4 text-gray-500">小カテゴリー：${ datas[i].category2.filter(c => c != "") }</h4>
         </div>
-        <ul class="flex mb-2">
+        <ul class="flex items-center mb-2">
         <li class="font-bold">キーワード：</li>
         ${ keywords }
         </ul>
         <div class="flex justify-end">
-            <a href="${ datas[i].pdfUrl }" target="_blank" rel="noopener noreferrer" class="w-32 text-center bg-yellow-400 hover:bg-yellow-300 text-black p-2 rounded-md shadow-md">開く</a>
+            <a href="${ datas[i].pdfUrl }" class="w-32 text-center bg-yellow-400 hover:bg-yellow-300 text-black p-2 rounded-md shadow-md">開く</a>
         </div>
     </div>
 </li>
@@ -216,12 +216,12 @@ async function HandleCategorySearch(type, ctgry) {
                 <h4 class="text-lg font-black my-1 mr-4 text-gray-500">大カテゴリー：${ datas[i].category1 }</h4>
                 <h4 class="text-lg font-black my-1 mr-4 text-gray-500">小カテゴリー：${ datas[i].category2.filter(c => c != "") }</h4>
             </div>
-            <ul class="flex mb-2">
+            <ul class="flex items-center mb-2">
             <li class="font-bold">キーワード：</li>
             ${ keywords }
             </ul>
             <div class="flex justify-end">
-                <a href="${ datas[i].pdfUrl }" target="_blank" rel="noopener noreferrer" class="w-32 text-center bg-yellow-400 hover:bg-yellow-300 text-black p-2 rounded-md shadow-md">開く</a>
+                <a href="${ datas[i].pdfUrl }" class="w-32 text-center bg-yellow-400 hover:bg-yellow-300 text-black p-2 rounded-md shadow-md">開く</a>
             </div>
         </div>
     </li>
