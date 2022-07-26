@@ -11,7 +11,6 @@
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/amataka-scholar/favicon.ico">
 
-    
     <title>Amataka Scholar</title>
 </head>
 <body class="bg-purple-50">
@@ -150,44 +149,12 @@
 
                     <h2 class="text-2xl font-bold border-b-2 border-purple-300">カテゴリー</h2>
                     <div class="mt-4">
-                        <div class="h-full">
-                            <ul class="">
-                                <li>
-                                    <button
-                                        class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2 text-2xl"
-                                        onclick="HandleCategorySearch(1, '理学')"
-                                    >
-                                        理学
-                                    </button>
-                                </li>
-                                <li>
-                                    <ul class="ml-4">
-                                        <li><button onclick="HandleCategorySearch(2, '数学')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">数学</button></li>
-                                        <li><button onclick="HandleCategorySearch(2, '物理')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">物理</button></li>
-                                        <li><button onclick="HandleCategorySearch(2, '化学')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">化学</button></li>
-                                        <li><button onclick="HandleCategorySearch(2, '生物')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">生物</button></li>
-                                        <li><button onclick="HandleCategorySearch(2, '地学')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">地学</button></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <button
-                                        class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2 text-2xl"
-                                        onclick="HandleCategorySearch(1, '工学')"
-                                    >
-                                        工学
-                                    </button>
-                                </li>
-                                <li>
-                                    <ul class="ml-4">
-                                        <li><button onclick="HandleCategorySearch(2, '建築')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">建築</button></li>
-                                        <li><button onclick="HandleCategorySearch(2, '土木')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">土木</button></li>
-                                        <li><button onclick="HandleCategorySearch(2, '情報')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">情報</button></li>
-                                        <li><button onclick="HandleCategorySearch(2, '機械')" class="bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-2">機械</button></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div id="category-list" class="h-full">
+                            <div class="flex justify-center items-center animate-pulse">
+                                <img src="src/refresh.svg" class="animate-spin w-8">
+                                ロード中
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -242,5 +209,12 @@
 
     <script src="./js/utils.js"></script>
     <script src="./js/search.js"></script>
+    <script src="./js/category.js"></script>
+    <script>
+        window.addEventListener("load", async function () {
+            const ctgry = await getCategories();
+            updateCategory(ctgry);
+        })
+    </script>
 </body>
 </html>

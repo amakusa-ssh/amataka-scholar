@@ -1,3 +1,7 @@
+/**
+ * lp.htmlの背景のアニメーション処理
+ */
+
 var particleSystem = null;
 var stage = null;
 
