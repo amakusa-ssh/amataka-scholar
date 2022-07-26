@@ -1,5 +1,10 @@
+/**
+ * 論文を検索する処理
+ * Google Spreadsheetから論文データを検索し、取得する。
+ */
+
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
-const FETCH_URL = "https://script.google.com/macros/s/AKfycbzuQRkdHgDb3ii08uT0BOVBTNst6Deg9FAM0P67zAP5qR1uQa8RLbg5F0pKVW-ikw/exec";
+const FETCH_URL_SEARCH = "https://script.google.com/macros/s/AKfycbwDzroeSATgUyyun5RVG3rqcidLzafud3h7-fnV20E1etExiKxuVU3u1rl3j3vJPw/exec";
 // CSSクラス追加
 function addClass(obj, cls) {
     if (!obj.classList.contains(cls)) {
@@ -54,14 +59,12 @@ async function HandleWordSearch () {
 
     // 値が不適だった場合「検索失敗」へ
     // 検索結果の取得 ========================================
-    const url = FETCH_URL + `?keyword=${ searchWord }&category1=&category2`;
+    const url = FETCH_URL_SEARCH + `?type=search&keyword=${ searchWord }&category1=&category2`;
     const fetchs = await fetch(url)
         .then(res => res.json())
         .then(data => {
             return data;
         });
-
-        console.log(fetchs);
 
     if (fetchs.datas.length == 0) {
         // 検索結果がない場合 ========================================
@@ -174,7 +177,7 @@ async function HandleCategorySearch(type, ctgry) {
 
     // 値が不適だった場合「検索失敗」へ
     // 検索結果の取得 ========================================
-    const url = FETCH_URL + `?keyword=&category1=${ category1 }&category2=${ category2 }`;
+    const url = FETCH_URL_SEARCH + `?type=search&keyword=&category1=${ category1 }&category2=${ category2 }`;
     const fetchs = await fetch(url)
         .then(res => res.json())
         .then(data => {
