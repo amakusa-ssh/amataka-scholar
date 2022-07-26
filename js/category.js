@@ -53,9 +53,11 @@ function updateCategory(ctgry) {
         ul.className = "ml-4";
         for (let j = 0; j < ctgry[i].category2.length; j++) {
             var li = document.createElement("li");
-            li.className = "bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-1 cursor-pointer";
-            li.setAttribute("onclick", `HandleCategorySearch(2, "${ctgry[i].category2[j]}")`)
-            li.innerHTML = ctgry[i].category2[j];
+            var sBtn = document.createElement("button");
+            sBtn.className = "bg-purple-600 text-white px-8 py-1 rounded-full hover:bg-purple-500 m-1 cursor-pointer";
+            sBtn.setAttribute("onclick", `HandleCategorySearch(2, "${ctgry[i].category2[j]}")`)
+            sBtn.innerHTML = ctgry[i].category2[j];
+            li.appendChild(sBtn);
             ul.appendChild(li);
         }
         div.appendChild(ul);
